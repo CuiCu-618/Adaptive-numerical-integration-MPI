@@ -1,0 +1,12 @@
+\form#0:$ \alpha + \beta $
+\form#1:$ \latex $
+\form#2:$ \Latex $
+\form#3:$ \LaTex $
+\form#4:$ \LaTeX $
+\form#5:$ f(x) \in [a,b], $
+\form#6:\[ \int_{a}^{b} f(x) dx \approx (b-a)\frac{f(a)+f(b)}{2} \]
+\form#7:\[ \int_{a}^{b} f(x) dx \approx frac{1}{2}\sum^n_{i=1}(x_i-x_{i-1})(f(x_{i-1})+f(x_i)) \]
+\form#8:\[ \int_{a}^{b} f(x) dx &\approx& (b-a)\frac{f(a)+f(b)}{2} \]
+\form#9:\[ \int_{a}^{b} f(x) dx &\approx& \frac{1}{2}\sum^n_{i=1}(x_i-x_{i-1})(f(x_{i-1})+f(x_i)) \]
+\form#10:\[ \int_{a}^{b} f(x) dx \approx \frac{1}{2}\sum^n_{i=1}(x_i-x_{i-1})(f(x_{i-1})+f(x_i)) \]
+\form#11:$ \int_{a}^{b} f(x) $
