@@ -4,4 +4,4 @@ project(MPI)
 set(CMAKE_CXX_STANDARD 11)
 include_directories(/usr/local/Cellar/mpich/3.3.2/include)
 
-add_executable(MPI main.cpp integration.cpp integration.h function.cpp function.h)
+add_executable(MPI main.cpp integration.cpp integration.h function.cpp function.h Interval.cpp Interval.h "integration_ne.h")

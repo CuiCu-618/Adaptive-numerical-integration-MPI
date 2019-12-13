@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mac/Desktop/Parallel/ch5_bxjsbook/src/Interval_point.h
+cmath
+-
+
+/Users/mac/Desktop/Parallel/ch5_bxjsbook/src/function.h
+
+/Users/mac/Desktop/Parallel/ch5_bxjsbook/src/integration.h
+
+/Users/mac/Desktop/Parallel/ch5_bxjsbook/src/main.cpp
+iostream
+-
+integration.h
+/Users/mac/Desktop/Parallel/ch5_bxjsbook/src/integration.h
+function.h
+/Users/mac/Desktop/Parallel/ch5_bxjsbook/src/function.h
+cmath
+-
+Interval_point.h
+/Users/mac/Desktop/Parallel/ch5_bxjsbook/src/Interval_point.h
+stack
+-
+

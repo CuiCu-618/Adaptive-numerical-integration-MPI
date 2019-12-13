@@ -4,7 +4,7 @@
  *
  * @brief Adaptive numerical integration
  *
- * Parallel algorithm based on simple domain decomposition \n
+ *
  * \f$ f(x) \in [a,b], \f$ \n
  * Trapezoid rule:
  * \f[
@@ -26,14 +26,21 @@
 #include "integration.h"
 #include "function.h"
 #include <cmath>
+#include "integration_ne.h"
+#include "Interval.h"
+#include <queue>
 using namespace std;
 
 void s();
 void p();
+void s_ne();
+
 int main()
 {
+
 //    s();
-    p();
+//    p();
+    s_ne();
     return 0;
 }
 
@@ -51,7 +58,9 @@ void s(){
          << "wall time = " << wall1 - wall0 << endl
          << "evaluation_count = " << evaluation_count << endl;
 }
-
+/**
+ * @brief Parallel algorithm based on simple domain decomposition \n
+ */
 void p()
 {
     int nprocs, myrank;
@@ -102,4 +111,21 @@ void p()
 
     MPI_Finalize();
 
+}
+
+void s_ne()
+{
+    double res, cpu0, cpu1, wall0, wall1;
+    double a = 0.0, b = 1.0;
+    int max = 0;
+    gettime(&cpu0, &wall0);
+    res = integration_ne(a, b, max);
+    gettime(&cpu1, &wall1);
+    cout << "s_ne(): " << endl;
+    cout << "result = " << res << endl
+         << "error = " << fabs(res - RESULT) << endl
+         << "cpu time = " << cpu1 - cpu0 << endl
+         << "wall time = " << wall1 - wall0 << endl
+         << "Maxi. number of intervals = " << max << endl
+         << "evaluation_count = " << evaluation_count << endl;
 }
